@@ -297,7 +297,7 @@ const About = () => {
             <div className="animate-on-scroll">
               <div className="glass rounded-2xl overflow-hidden h-full">
                 <div className="aspect-square bg-arkyin-gray">
-                  <img src="/assets/CEO.jpg" alt="Krish Patel" className="w-full h-full object-cover" />
+                  <img src="https://arkyn07.onrender.com/assets/CEO.jpg" alt="Krish Patel" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-medium mb-1">Krish Patel</h3>

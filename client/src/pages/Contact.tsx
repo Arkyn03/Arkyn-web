@@ -73,7 +73,7 @@ const Contact = () => {
     setSubmitStatus('Submitting...');
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', { // Replace with your backend URL if different
+      const response = await fetch('https://arkyn07.onrender.com/api/contact', { // Replace with your backend URL if different
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
