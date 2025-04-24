@@ -1,6 +1,16 @@
 const path = require("path");
 require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
 const mongoose = require("mongoose");
+const fs = require("fs");
+
+const envPath = path.resolve(__dirname, "../.env");
+if (fs.existsSync(envPath)) {
+  require("dotenv").config({ path: envPath });
+  console.log("Loaded environment variables from .env file");
+} else {
+  console.log("No .env file found; using existing environment variables");
+}
+
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI);
@@ -10,7 +20,4 @@ const connectDB = async () => {
     process.exit(1);
   }
 };
-
-// connectDB();
-
 module.exports = connectDB;
