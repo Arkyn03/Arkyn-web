@@ -3,28 +3,18 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const contactRoutes = require("./routes/contactRoutes");
+const connectDB = require("./config/db"); // Import the database connection function
 
 dotenv.config(); // Load environment variables from .env
 
 const app = express();
 
-// Configure CORS to allow only localhost:8080
-const corsOptions = {
-  origin: "https://arkyn.netlify.app/", // Specify the allowed origin
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Allowed HTTP methods
-  credentials: true, // Allow cookies/auth headers if needed (adjust based on your needs)
-  optionsSuccessStatus: 204, // Some legacy browsers choke on 204
-};
-
-app.use(cors(corsOptions)); // Use CORS middleware with options
+app.use(cors());
 
 app.use(express.json()); // Parses incoming JSON requests
 
 // Database Connection
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB connected successfully!"))
-  .catch((err) => console.error("MongoDB connection error:", err));
+connectDB();
 
 // Routes
 app.use("/api/contact", contactRoutes);
