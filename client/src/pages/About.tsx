@@ -28,6 +28,7 @@ import {
   Brain
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import staticAssets from '@/lib/assets';
 
 const About = () => {
   // Apply fade-in animation to elements as they become visible
@@ -297,7 +298,7 @@ const About = () => {
             <div className="animate-on-scroll">
               <div className="glass rounded-2xl overflow-hidden h-full">
                 <div className="aspect-square bg-arkyin-gray">
-                  <img src="https://arkyn07.onrender.com/assets/CEO.jpg" alt="Krish Patel" className="w-full h-full object-cover" />
+                  <img src={staticAssets.CEO} alt="Krish Patel" className="w-full h-full object-cover" />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-medium mb-1">Krish Patel</h3>
@@ -311,7 +312,7 @@ const About = () => {
             <div className="animate-on-scroll">
               <div className="glass rounded-2xl overflow-hidden h-full">
                 <div className="aspect-square bg-arkyin-gray">
-                <img src="/assets/CDO.jpg" alt="Raj Patel" className="w-full h-full object-cover" />
+                <img src={staticAssets.CDO} alt="Raj Patel" className="w-full h-full object-cover" />
 
                 </div>
                 <div className="p-6">
@@ -326,7 +327,7 @@ const About = () => {
             <div className="animate-on-scroll">
               <div className="glass rounded-2xl overflow-hidden h-full">
                 <div className="aspect-square bg-arkyin-gray">
-                <img src="/assets/CTO.jpg" alt="Krish Patel" className="w-full h-full object-cover" />
+                <img src={staticAssets.CTO} alt="Krish Patel" className="w-full h-full object-cover" />
 
                 </div>
                 <div className="p-6">

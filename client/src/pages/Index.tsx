@@ -20,6 +20,7 @@ import {
   Rocket
 } from 'lucide-react';
 import { motion } from 'framer-motion';
+import staticAssets from '@/lib/assets';
 
 const Index = () => {
   const navigate = useNavigate();
@@ -306,7 +307,7 @@ const Index = () => {
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-arkyin-purple/20 to-arkyin-blue/20 blur-2xl rounded-2xl"></div>
                   <img 
-                    src="/assets/dashboard.png" 
+                    src={staticAssets.Dashboard} 
                     alt="Dashboard Preview" 
                     className="relative rounded-2xl shadow-2xl shadow-arkyin-purple/20"
                   />
