@@ -10,7 +10,7 @@ const app = express();
 
 // Configure CORS to allow only localhost:8080
 const corsOptions = {
-  origin: "http://localhost:8080", // Specify the allowed origin
+  origin: "https://arkyn.netlify.app/", // Specify the allowed origin
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE", // Allowed HTTP methods
   credentials: true, // Allow cookies/auth headers if needed (adjust based on your needs)
   optionsSuccessStatus: 204, // Some legacy browsers choke on 204
